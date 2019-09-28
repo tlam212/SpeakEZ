@@ -2,7 +2,7 @@ import React from 'react'
 
 const MapContainer = () => {
   return(
-    <div>MapContainer</div>
+    <div className="mapDiv">MapContainer</div>
   )
 }
 export default MapContainer

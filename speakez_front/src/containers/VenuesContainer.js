@@ -3,7 +3,12 @@ import React from 'react'
 class VenuesContainer extends React.Component {
   render(){
     return(
-      <div></div>
+      <div className="vcDiv">
+  
+
+
+
+      </div>
     )
   }
 }
