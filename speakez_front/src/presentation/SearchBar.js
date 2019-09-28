@@ -1,9 +1,10 @@
 import React from 'react'
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return(
     <div className="ui icon input">
-        <input type="text" placeholder="Search..."  name="searchInput" id="searchInput"/>
+        <input value={props.searchValue} placeholder="Search..."  name="searchInput" id="searchInput"
+        onChange={props.searchText}/>
         <i aria-hidden="true" className="search icon"></i>
       </div>
   )

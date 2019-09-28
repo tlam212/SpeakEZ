@@ -34,3 +34,11 @@ float: right;
 display: inline-block;
 height: 100vh;
 }
+
+.card-body{
+  /* border: solid black 1px; */
+  text-align: center;
+  box-shadow: 5px 10px 8px #888888;
+  
+
+}
