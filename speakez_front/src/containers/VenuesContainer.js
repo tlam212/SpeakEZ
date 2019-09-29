@@ -1,13 +1,15 @@
 import React from 'react'
 import VenueCard from '../presentation/VenueCard'
 import SearchBar from '../presentation/SearchBar'
+import VenueInfo from '../presentation/VenueInfo'
 
 
 class VenuesContainer extends React.Component{
 
   state ={
     allVenues:[],
-    searchInput: ""
+    searchInput: "",
+    venueDetail: null
   }
 
   handleSearchChange = (e) => {
@@ -15,6 +17,11 @@ class VenuesContainer extends React.Component{
     this.setState({
       searchInput: newText
     })
+  }
+
+  handleVenueCardClick = (e) => {
+    console.log(e.target.dataset.id)
+
   }
 
 
@@ -35,15 +42,16 @@ class VenuesContainer extends React.Component{
     return(
       <div className="vcDiv">
         <SearchBar searchValue={this.state.searchInput} searchText={this.handleSearchChange} />
-      {
-        this.state.allVenues.filter(venue => venue.address2.includes(this.state.searchInput)).map(venue => {
-         return <VenueCard
-         key={venue.id}
-         name={venue.name}
-         address1={venue.address1}
-         address2={venue.address2}/>
-      })
-      }
+        <VenueInfo venue={this.state.venueDetail}/>
+        {
+          this.state.allVenues.filter(venue => venue.address2.includes(this.state.searchInput)).map(venue => {
+           return <VenueCard
+           key={venue.id}
+           venue={venue}
+           whenClicked={this.handleVenueCardClick}
+           />
+        })
+        }
 
       </div>
     )
