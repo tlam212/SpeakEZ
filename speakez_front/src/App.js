@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './presentation/NavBar'
+import NavBar from './containers/NavBar'
 import VenuesContainer from './containers/VenuesContainer'
 import VenueInfo from './presentation/VenueInfo'
 import MapContainer from './containers/MapContainer'

@@ -1,10 +1,10 @@
 .logoDiv{
-  margin-top: 3vh;
   font-family: 'Megrim', cursive;
   font-size: 38px;
   color: black;
   font-weight: bold;
 }
+
 
 .navbar-brand{
   /* border: solid black 1px; */
@@ -36,6 +36,7 @@ height: 100vh;
 }
 
 .card-body{
+  color: black;
   /* border: solid black 1px; */
   text-align: center;
   box-shadow: 5px 10px 8px #888888;

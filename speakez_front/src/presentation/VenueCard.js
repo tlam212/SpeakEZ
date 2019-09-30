@@ -8,7 +8,6 @@ const VenueCard = (props) => {
           <h5>{props.venue.name}</h5>
           <p>{props.venue.address1}</p>
           <p>{props.venue.address2}</p>
-          <button data-id={props.venue.id}>see more...</button>
         </div>
     </Link>
   )
