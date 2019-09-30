@@ -15,16 +15,13 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-      this.getVenues()
-  }
-
-  getVenues = () =>{
     fetch('http://localhost:3000/venues')
     .then(resp => resp.json())
     .then(venueObj => {
       this.setState({allVenues:venueObj})
     })
   }
+
   handleSearchChange = (e) => {
     let newText = e.target.value
     this.setState({
@@ -36,10 +33,13 @@ class App extends React.Component {
         return(
           <div>
           <NavBar />
-          <Route exact path="/venues/venues/:id" render={(props) => {
+          <Route exact path="/venues/:id" render={(props) => {
             let venueId = props.match.params.id
-            let venue = this.state.allVenues.find(v => v.id === venueId)
+            console.log(venueId)
+            let venue = this.state.allVenues.find(v => v.id == venueId)
+            console.log(venue)
             return <VenueInfo venue={venue} />
+
           }}/>
 
           <Route exact path="/venues" render={() =>     <VenuesContainer

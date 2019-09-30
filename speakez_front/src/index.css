@@ -39,6 +39,56 @@ height: 100vh;
   /* border: solid black 1px; */
   text-align: center;
   box-shadow: 5px 10px 8px #888888;
-  
+
+
+}
+
+header {
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    /* background-attachment: fixed; */
+
+}
+
+.coverPageDiv {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .btn:link,
+  .btn:visited,
+  input[type=submit]{
+      display: inline-block;
+      padding: 10px 30px;
+      font-weight: bold;
+      font-size: 30px;
+      text-decoration: none;
+      border-radius: 200px;
+      -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+      transition: background-color 0.2s, border 0.2s, color 0.2s;
+  }
+
+  .btn-full:link,
+  .btn-full:visited,
+  input[type=submit]{
+      font-family: 'Megrim', cursive;
+      color: black;
+      margin-right: 15px;
+  }
+
+  .btn-full:hover,
+  .btn-full:active {
+      border: 1px solid black;
+  }
+
+.card {
+  width: 50rem;
 
 }

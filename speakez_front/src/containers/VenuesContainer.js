@@ -7,7 +7,7 @@ import SearchBar from '../presentation/SearchBar'
 const VenuesContainer = ({handleSearchChange, searchValue, venues}) => {
 
   let searchedVenues = venues.filter((venue) => venue.address2.includes(searchValue))
-  console.log(searchedVenues)
+
 
     return(
       <div className="vcDiv">
