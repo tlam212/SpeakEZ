@@ -1,16 +1,18 @@
 import React from 'react'
 
 
-const VenueInfo= (props) => {
-    return props.venue ? (
-      <div className="ui segment" >
-          <img src={props.venue.img} className="ui medium centered image" alt={props.venue.name}></img>
-          <h2>{props.venue.name}</h2>
-          <p> {props.venue.address1}</p>
-          <p> {props.venue.address2}</p>
-          <p>{props.venue.description}</p>
-      </div>
-    ) : null
+const VenueInfo= ({venue}) => {
+  console.log(venue)
 
+    return  (
+      <div className="ui card" >
+
+          <img src={venue.img} className="ui medium centered image" alt={venue.name}/>
+          <h2>{venue.name}</h2>
+          <p> {venue.address1}</p>
+          <p> {venue.address2}</p>
+          <p>{venue.description}</p>
+      </div>
+    )
 }
 export default VenueInfo
