@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function CoverPage() {
+const CoverPage = () => {
 
     return(
       <header>

@@ -1,6 +1,7 @@
 import React from 'react'
 import VenueCard from '../presentation/VenueCard'
 import SearchBar from '../presentation/SearchBar'
+import MapContainer from '../containers/MapContainer'
 
 
 
@@ -17,6 +18,7 @@ const VenuesContainer = ({handleSearchChange, searchValue, venues}) => {
            key={venue.id}
            venue={venue}
            />)}
+
       </div>
     )
 }

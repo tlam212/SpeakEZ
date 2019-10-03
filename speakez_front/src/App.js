@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './containers/NavBar'
+import NavBar from './presentation/NavBar'
 import VenuesContainer from './containers/VenuesContainer'
 import VenueInfo from './presentation/VenueInfo'
 import MapContainer from './containers/MapContainer'
@@ -39,7 +39,6 @@ class App extends React.Component {
             let venue = this.state.allVenues.find(v => v.id == venueId)
             console.log(venue)
             return <VenueInfo venue={venue} />
-
           }}/>
 
           <Route exact path="/venues" render={() =>     <VenuesContainer
